@@ -6,4 +6,4 @@ require_once __DIR__ . '/bootstrap.php';
 
 $app = app();
 $app->sessionManager()->destroy();
-$app->redirector()->redirect('index.php');
+$app->redirector()->redirect('../index.php');

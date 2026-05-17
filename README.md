@@ -42,7 +42,7 @@ mysql -u root -p < database/schema.sql
 
 ### 3. Configure database
 
-Edit `config.php` if your MySQL username/password differs:
+Edit `pages/config.php` if your MySQL username/password differs:
 
 ```php
 define('DB_HOST', 'localhost');
@@ -68,23 +68,25 @@ Use **Register** to create a teacher and student account, or use demo accounts f
 ```
 php-lms/
 ├── assets/css/style.css   # Styles
-├── config.php             # App & DB settings
 ├── database/schema.sql    # Database tables
-├── includes/
-│   ├── db.php             # MySQL connection
-│   ├── functions.php      # Helpers
-│   ├── header.php
-│   └── footer.php
+├── pages/
+│   ├── config.php         # App & DB settings
+│   ├── bootstrap.php
+│   ├── includes/
+│   │   ├── header.php
+│   │   └── footer.php
+│   ├── register.php
+│   ├── dashboard.php      # Class list
+│   ├── create_class.php   # Teacher only
+│   ├── join_class.php     # Student only
+│   ├── class.php          # Class stream
+│   ├── assignment.php     # Submit / grade
+│   ├── download.php
+│   └── logout.php
 ├── uploads/               # Student file uploads
 ├── index.php              # Login
-├── register.php
-├── dashboard.php          # Class list
-├── create_class.php       # Teacher only
-├── join_class.php         # Student only
-├── class.php              # Class stream
-├── assignment.php         # Submit / grade
-├── download.php
-└── logout.php
+├── composer.json
+└── src/                   # Application classes
 ```
 
 ## How to use (quick guide)

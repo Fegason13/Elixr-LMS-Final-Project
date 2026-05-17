@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($registerError === null) {
         $flash->set('Account created! Please sign in.', 'success');
-        $app->redirector()->redirect('index.php');
+        $app->redirector()->redirect('../index.php');
     }
 
     $error = $registerError ?? '';
@@ -72,7 +72,7 @@ require_once __DIR__ . '/includes/header.php';
         <button type="submit" class="btn btn-block">Register</button>
     </form>
 
-    <p class="auth-link">Already have an account? <a href="index.php">Sign in</a></p>
+    <p class="auth-link">Already have an account? <a href="../index.php">Sign in</a></p>
 </div>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

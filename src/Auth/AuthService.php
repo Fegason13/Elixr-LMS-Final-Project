@@ -57,7 +57,7 @@ final class AuthService
     public function requireLogin(): void
     {
         if (!$this->isLoggedIn()) {
-            $this->redirector->redirect('index.php');
+            $this->redirector->redirect('../index.php');
         }
     }
 

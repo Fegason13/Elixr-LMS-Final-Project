@@ -7,6 +7,7 @@ use App\Config\AppConfig;
 $app = app();
 $auth = $app->authService();
 $flash = $app->flashMessage()->get();
+$assetBase = strpos($_SERVER['SCRIPT_NAME'] ?? '', '/pages/') !== false ? '../' : '';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +15,7 @@ $flash = $app->flashMessage()->get();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo isset($pageTitle) ? htmlspecialchars($pageTitle) . ' - ' : ''; ?><?php echo htmlspecialchars(AppConfig::getSiteName()); ?></title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo $assetBase; ?>assets/css/style.css">
 </head>
 <body>
     <?php if ($auth->isLoggedIn()): ?>

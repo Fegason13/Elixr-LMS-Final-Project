@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/pages/bootstrap.php';
 
 use App\Config\AppConfig;
 
@@ -10,7 +10,7 @@ $app = app();
 $auth = $app->authService();
 
 if ($auth->isLoggedIn()) {
-    $app->redirector()->redirect('dashboard.php');
+    $app->redirector()->redirect('pages/dashboard.php');
 }
 
 $error = '';
@@ -21,14 +21,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $loginError = $auth->attemptLogin($email, $password);
 
     if ($loginError === null) {
-        $app->redirector()->redirect('dashboard.php');
+        $app->redirector()->redirect('pages/dashboard.php');
     }
 
     $error = $loginError ?? '';
 }
 
 $pageTitle = 'Login';
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/pages/includes/header.php';
 ?>
 
 <div class="login-page">
@@ -79,9 +79,9 @@ require_once __DIR__ . '/includes/header.php';
         </form>
         <p class="auth-link">
             No account?
-            <a href="register.php">Register here</a>
+            <a href="pages/register.php">Register here</a>
         </p>
     </div>
 </div>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<?php require_once __DIR__ . '/pages/includes/footer.php'; ?>
