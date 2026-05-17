@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# Classroom LMS (PHP + MySQL)
+# Elixr LMS (PHP + MySQL)
 
 A simple Learning Management System similar to Google Classroom, built with **basic PHP** (no frameworks) and **MySQL**.
 
