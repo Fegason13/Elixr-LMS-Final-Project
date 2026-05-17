@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Classroom LMS (PHP + MySQL)
 
 A simple Learning Management System similar to Google Classroom, built with **basic PHP** (no frameworks) and **MySQL**.
@@ -105,6 +106,3 @@ php-lms/
 
 This project uses basic PHP for learning purposes. For production, use prepared statements (PDO/MySQLi), CSRF tokens, stricter validation, and HTTPS.
 
-## License
-
-Free to use for education and personal projects.
