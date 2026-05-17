@@ -1,0 +1,21 @@
+{
+    "name": "elixr/php-lms",
+    "description": "Elixr LMS",
+
+    "type": "project",
+
+    "authors": [{
+
+        "name": "Kou",
+        "email": "07412006@dwc-legazpi.edu"
+        
+    }],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
