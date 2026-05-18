@@ -48,7 +48,7 @@ Edit `pages/config.php` if your MySQL username/password differs:
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'classroom_lms');
+define('DB_NAME', 'elixr_lms');
 ```
 
 ### 4. Run the app
