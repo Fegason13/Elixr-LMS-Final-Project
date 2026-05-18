@@ -26,7 +26,7 @@ final class AppConfig
     public const DB_PASS = '';
 
   /** @var string Default database name */
-    public const DB_NAME = 'classroom_lms';
+    public const DB_NAME = 'elixr_lms';
 
   /** @var string Student author name for PHPDoc blocks */
     public const AUTHOR_NAME = 'Jericho';
